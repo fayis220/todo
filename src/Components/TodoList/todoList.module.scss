@@ -1,0 +1,189 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto 40%;
+  background-attachment: fixed;
+  position: absolute;
+  .main {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-self: flex-start;
+    margin-top: 60px;
+  }
+  .addTodo {
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    input::placeholder {
+      color: #9495a5;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.25px;
+    }
+    input {
+      font-size: 20px;
+    }
+    .add {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .title {
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 15px;
+  }
+  .subtitle {
+    margin-top: 50%;
+    color: #9d6ab8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+  }
+  .wrapper {
+    margin-top: 30px;
+  }
+  .list {
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0px;
+      margin-bottom: 0;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .listItem {
+      li {
+        font-family: Josefin Sans;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        background-color: #fff;
+        border: none;
+        border-bottom: 0.1px solid #e3e4f1;
+        max-height: 50px;
+        overflow-y: auto;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+          background: linear-gradient(135deg, #ffffff, #f6f2fc);
+        }
+        i {
+          margin-right: 10px;
+        }
+        .content {
+          display: flex;
+          margin: 10px;
+          s {
+            margin-left: 15px;
+            color: #d1d2da;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.25px;
+          }
+          span {
+            margin-left: 15px;
+            color: #494c6b;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.25px;
+          }
+          input {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .listItem:hover .icon {
+      display: block;
+    }
+    .icon {
+      display: none;
+    }
+  }
+  .filter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 44px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    flex-wrap: nowrap;
+    button {
+      background: none;
+      border: none;
+      color: #9495a5;
+      text-align: right;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.194px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .itemLeft {
+      color: #9495a5;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.194px;
+    }
+  }
+  .smallScreen {
+    display: none;
+  }
+}
+.status {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .smallScreen {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    margin-top: 17px;
+    background-color: #ffff;
+    height: 35px;
+    button {
+      background: none;
+      border: none;
+      color: #9495a5;
+      text-align: right;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.194px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .status {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+.container input {
+  font-family: Josefin Sans;
+  width: 600px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 24px 30px 24px 56px;
+  outline: none;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container input {
+    width: 82%;
+  }
+}
+
+.box {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
